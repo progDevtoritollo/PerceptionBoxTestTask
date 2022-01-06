@@ -1,3 +1,35 @@
+# Backlog task:
+
+rickandmortyapi test
+
+Requirements:
+
+1. Get list of characters from https://rickandmortyapi.com/documentation
+2. Show list of all characters.
+3. Implement autocomplete by characters
+4. Show a list of characters (show fields: name, status). Make list performance
+   optimization.
+5. Open the character's profile page by clicking on a row in the list or by selecting in
+   autocomplete. Show field: с выводом
+   a. name
+   b. species
+   c. gender
+   d. location
+   e. episode
+   f. status
+   g. created
+6. Push all code to GitHub and send the link.
+
+   Good to have:
+
+7. SignIn by facebook or linkedin
+8. Make it possible to like/dislike any of the characters.
+9. Show the list of liked characters.
+10. Make it possible to add a character's photo.
+    You can store data in localstorage.
+    Optional:
+    Use material ui kit.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

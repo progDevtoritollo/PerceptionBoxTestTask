@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ListCharacters from './components/ListCharacters/ListCharacters';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ListCharacters />
   </React.StrictMode>,
   document.getElementById('root')
 );
