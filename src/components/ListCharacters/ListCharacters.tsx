@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Pagination from '@mui/material/Pagination';
 
 import charactersService from "./../../services/charactersService";
-import { CharactersInterface } from "./../types/index"
+import { CharactersInterface } from "../../types/index"
 import Character from "./../Character/Character"
 import "./ListCharacters.scss";
 
@@ -28,11 +29,12 @@ const ListCharacters: React.FC = () => {
     <div>Respond: </div> */}
     {loading ? (<p>Loading...</p>) : (
       <>
-        <ul>
+        <ul className="characters-list">
           {characters.map((character: CharactersInterface) => (
-            <Character key={character.id} name={character.name} image={character.image} status={character.status} />
+            <Character key={character.id} id={character.id} name={character.name} image={character.image} status={character.status} />
           ))}
         </ul>
+        <Pagination count={42} color="secondary" />
       </>)
     }
   </div>;

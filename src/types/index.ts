@@ -1,15 +1,15 @@
 export interface CharactersInterface {
-  id: string,
-  name: string,
+  id: number,
+  name: string,//
   status: string,
-  species: string,
+  species: string,//
   date: string,
   image: string,
   url: string,
-  gender:string,
-  location:object,
-  episode:object,
-  created:string,
+  gender:string,//
+  location:object,//
+  episode:object,//
+  created:string,//
 };
 
 export interface CharactersDataInterface {

@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
+
+
 import './App.css';
+import ListCharacters from './components/ListCharacters/ListCharacters';
+import CharacterPage from './components/CharacterPage/CharacterPage';
+import NotFound from './components/NotFound/NotFound';
+import characters from './services/charactersService';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Rick and Morty actors
       </header>
+      <div className="content">
+        <Switch>
+          <Route path="/" exact component={() => <ListCharacters />} />
+          <Route path="/character/:id" exact component={() => <CharacterPage />} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </div>
     </div>
   );
 }

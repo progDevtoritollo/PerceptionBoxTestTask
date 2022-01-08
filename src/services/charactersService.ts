@@ -9,6 +9,7 @@ class Characters {
    
     try{
       let response = await axios.get(`${this.API_ENDPOINT}`) 
+      console.log(response.data)
       return response.data.results
     }
     catch (e) {
