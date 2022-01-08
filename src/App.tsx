@@ -6,14 +6,21 @@ import './App.css';
 import ListCharacters from './components/ListCharacters/ListCharacters';
 import CharacterPage from './components/CharacterPage/CharacterPage';
 import NotFound from './components/NotFound/NotFound';
-import characters from './services/charactersService';
+import CharactersListAction from "./actions/characters"
+import { Button } from '@mui/material';
+
 
 
 function App() {
+  function handleClick() {
+    console.log("download cliked")
+    CharactersListAction.fetchItems()
+  }
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" >
         Rick and Morty actors
+        <Button onClick={handleClick}> Download</Button>
       </header>
       <div className="content">
         <Switch>

@@ -5,6 +5,7 @@ import charactersService from "./../../services/charactersService";
 import { CharactersInterface } from "../../types/index"
 import Character from "./../Character/Character"
 import "./ListCharacters.scss";
+import CharactersListAction from "./../../actions/characters"
 
 
 
@@ -21,6 +22,7 @@ const ListCharacters: React.FC = () => {
 
   useEffect(() => {
     fetchCharacters()
+    CharactersListAction.fetchItems()
     return () => { setLoading(false) }
   })
 
