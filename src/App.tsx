@@ -4,9 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import ListCharacters from './components/ListCharacters/ListCharacters';
-import CharacterPage from './components/CharacterPage/CharacterPage';
+import CharacterPageJS from './components/CharacterPage/CharacterPage';
 import NotFound from './components/NotFound/NotFound';
-import characters from './services/charactersService';
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       <div className="content">
         <Switch>
           <Route path="/" exact component={() => <ListCharacters />} />
-          <Route path="/character/:id" exact component={() => <CharacterPage />} />
+          <Route path="/character/:id" exact component={() => <CharacterPageJS />} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

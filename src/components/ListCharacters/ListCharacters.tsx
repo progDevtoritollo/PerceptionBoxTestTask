@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
 
-import charactersService from "./../../services/charactersService";
+import pagrsService from "../../services/pagesService";
 import { CharactersInterface } from "../../types/index"
 import Character from "./../Character/Character"
 import "./ListCharacters.scss";
@@ -13,7 +13,7 @@ const ListCharacters: React.FC = () => {
   const [characters, setCharacters] = useState<CharactersInterface[]>([])
 
   async function fetchCharacters() {
-    let data = await charactersService.getCharacters()
+    let data = await pagrsService.getPage()
     if (loading) {
       setCharacters(data)
     }

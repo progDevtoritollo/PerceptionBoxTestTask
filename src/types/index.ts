@@ -12,9 +12,14 @@ export interface CharactersInterface {
   created:string,//
 };
 
-export interface CharactersDataInterface {
-  description: string,
-  amount: number,
-  date: string,
-  category: string,
+export interface CharacterInterface {
+  id: number,
+  name: string,//
+  image: string,
+  status: string,
+  species: string,//
+  gender:string,//
+  location:object,//
+  episode:object,//
+  created:string,//
 };

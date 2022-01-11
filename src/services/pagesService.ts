@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 
-class Characters {
+class Page {
   API_ENDPOINT = "https://rickandmortyapi.com/api/character"
 
-  async getCharacters() {
+  async getPage() {
     axios.defaults.headers.common['accept'] = 'application/json'
+    axios.defaults.headers.common['Content-Type'] = 'application/json'
    
     try{
       let response = await axios.get(`${this.API_ENDPOINT}`) 
@@ -14,10 +15,10 @@ class Characters {
     }
     catch (e) {
     console.log(e)
-  }
+  };
 
   }
 }
-const characters = new Characters()
+const pages = new Page()
 
-export default characters
+export default pages
