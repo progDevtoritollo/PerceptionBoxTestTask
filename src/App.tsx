@@ -9,7 +9,7 @@ import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
-
+  const [page, setPage] = React.useState(1);
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +17,7 @@ function App() {
       </header>
       <div className="content">
         <Switch>
-          <Route path="/" exact component={() => <ListCharacters />} />
+          <Route path="/" exact component={() => <ListCharacters page={page} setPage={setPage} />} />
           <Route path="/character/:id" exact component={() => <CharacterPage />} />
           <Route path="*" component={NotFound} />
         </Switch>

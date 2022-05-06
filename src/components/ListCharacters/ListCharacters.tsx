@@ -6,14 +6,17 @@ import { CharactersInterface } from "../../types/index"
 import Character from "./../Character/Character"
 
 import "./ListCharacters.scss";
+type ListCharactersInterface = {
+  page: number
+  setPage: React.Dispatch<React.SetStateAction<number>>,
+}
 
+const ListCharacters = ({ page, setPage }: ListCharactersInterface) => {
 
-// const ListCharacters = ({ page }: ListCharactersInterface) => {
-
-const ListCharacters = () => {
+  // const ListCharacters = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [characters, setCharacters] = useState<CharactersInterface[]>([])
-  const [page, setPage] = React.useState(1);
+
 
   const handlePaginationChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
