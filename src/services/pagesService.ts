@@ -2,14 +2,15 @@ import axios from 'axios';
 
 
 class Page {
-  API_ENDPOINT = "https://rickandmortyapi.com/api/character"
+  API_ENDPOINT = "https://rickandmortyapi.com/api/character/?page="
 
-  async getPage() {
+  async getPage(page:number) {
     axios.defaults.headers.common['accept'] = 'application/json'
     axios.defaults.headers.common['Content-Type'] = 'application/json'
    
     try{
-      let response = await axios.get(`${this.API_ENDPOINT}`) 
+      console.log(page);
+      let response = await axios.get(`${this.API_ENDPOINT}` + page) 
       console.log(response.data)
       return response.data.results
     }

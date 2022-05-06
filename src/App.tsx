@@ -4,11 +4,12 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import ListCharacters from './components/ListCharacters/ListCharacters';
-import CharacterPageJS from './components/CharacterPage/CharacterPage';
+import CharacterPage from './components/CharacterPage/CharacterPage';
 import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +18,7 @@ function App() {
       <div className="content">
         <Switch>
           <Route path="/" exact component={() => <ListCharacters />} />
-          <Route path="/character/:id" exact component={() => <CharacterPageJS />} />
+          <Route path="/character/:id" exact component={() => <CharacterPage />} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

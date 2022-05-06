@@ -23,3 +23,5 @@ export interface CharacterInterface {
   episode:object,//
   created:string,//
 };
+
+
